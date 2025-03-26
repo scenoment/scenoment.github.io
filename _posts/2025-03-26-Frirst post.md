@@ -1,5 +1,4 @@
 ---
-
 latout : single
 title : 제발 되라...
 
@@ -7,4 +6,4 @@ title : 제발 되라...
 
 ### 왜 안 되는거야...
 
-![카페이서 깃허브 테스트.png](../assets/98cca88c995307396a4349bc9fc470fb7c9fcff5.png)~~~~
+![포스터1.png](images/2025-03-26-Frirst%20post/f1cf26c5d05a636e2707ba4f286db36d2ef3ce61.png)
