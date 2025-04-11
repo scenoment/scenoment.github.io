@@ -1,15 +1,39 @@
 <%*
-let content = await app.vault.read(tp.file.find_tfile(tp.file.title));
+const title = tp.file.title;
+const vault = app.vault;
+const attachmentsPath = "_attachments"; // <-- Obsidian 설정에 맞춰 수정 가능
+const targetImageFolder = `images/${title}`;
 
-// ![[파일명.png]] 찾기
-const regex = /!\[\[([^\]]+\.(png|jpg|jpeg|gif))\]\]/g;
-let matches = [...content.matchAll(regex)];
+const file = tp.file.find_tfile(title);
+let content = await vault.read(file);
 
-for (let match of matches) {
-  const fileName = match[1];
-  const newMarkdown = `![image](../images/${fileName})`;
-  content = content.replace(match[0], newMarkdown);
+// ![[이미지.png]] 형식 찾기
+const matches = [...content.matchAll(/!\[\[([^\]]+\.(png|jpg|jpeg|gif))\]\]/g)];
+
+for (const match of matches) {
+  const imageName = match[1];
+  const fromPath = `${attachmentsPath}/${imageName}`;
+  const toPath = `${targetImageFolder}/${imageName}`;
+
+  const imageFile = vault.getAbstractFileByPath(fromPath);
+  if (!imageFile) {
+    console.warn(`파일을 찾을 수 없음: ${fromPath}`);
+    continue;
+  }
+
+  // 대상 폴더 없으면 만들기
+  const folderExists = await vault.adapter.exists(targetImageFolder);
+  if (!folderExists) {
+    await vault.createFolder(targetImageFolder);
+  }
+
+  // 이동
+  await vault.rename(imageFile, toPath);
+
+  // 링크 교체
+  content = content.replace(match[0], `![image](../${toPath})`);
 }
 
-await app.vault.modify(tp.file.find_tfile(tp.file.title), content);
+// 문서 업데이트
+await vault.modify(file, content);
 %>
