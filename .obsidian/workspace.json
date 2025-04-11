@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2025-4-11-image test.md",
+                "file": "_posts/2025-03-27-first posting.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-4-11-image test"
+              "title": "2025-03-27-first posting"
             }
           },
           {
@@ -49,8 +49,7 @@
               "title": "Paste Image.md"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -198,15 +197,18 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f609a1d99a611ae0",
+  "active": "627efe8fdff5d87d",
   "lastOpenFiles": [
-    "images/2025-4-11-image test",
-    "images/2025-4-11-image test/Pasted image 20250331105718.png",
+    "images/2025-03-27-first-posting",
+    "Templates/Paste Image2.md.md",
     "_posts/2025-03-27-first posting.md",
-    "_posts/2025-4-11-image test.md",
-    "images/2025-03-27-first posting/Pasted image 20250410155000.png",
     "images/2025-03-27-first posting",
+    "images/2025-03-27-first-posting/Pasted_image_20250410155000.png",
     "Templates/Paste Image.md.md",
+    "Templates/Paste Image2",
+    "_posts/2025-4-11-image test.md",
+    "images/2025-4-11-image test/Pasted image 20250331105718.png",
+    "images/2025-4-11-image test",
     "images",
     "_images/무제",
     "images",
