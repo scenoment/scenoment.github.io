@@ -49,7 +49,8 @@
               "title": "Paste Image.md"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -197,7 +198,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "627efe8fdff5d87d",
+  "active": "f609a1d99a611ae0",
   "lastOpenFiles": [
     "images/2025-03-27-first-posting",
     "Templates/Paste Image2.md.md",

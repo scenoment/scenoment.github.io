@@ -1,5 +1,5 @@
 <%*
-const title = tp.file.title.replace(/\s+/g, '-'); // 공백 제거
+const title = tp.file.title.replace(/\s+/g, '-'); // 공백 제거된 제목
 const vault = app.vault;
 const attachmentsPath = "_attachments";
 const targetImageFolder = `images/${title}`;
@@ -12,7 +12,7 @@ const matches = [...content.matchAll(/!\[\[([^\]]+\.(png|jpg|jpeg|gif))\]\]/g)];
 
 for (const match of matches) {
   const originalImageName = match[1];
-  const imageName = originalImageName.replace(/\s+/g, '_');
+  const imageName = originalImageName.replace(/\s+/g, '_'); // 파일명 공백 제거
   const fromPath = `${attachmentsPath}/${originalImageName}`;
   const toPath = `${targetImageFolder}/${imageName}`;
 
@@ -25,7 +25,7 @@ for (const match of matches) {
   await vault.rename(imageFile, toPath);
 
   const encodedPath = toPath.replace(/\s/g, '%20');
-  const link = `![image](/${encodedPath})`;
+  const link = `\n\n![image](/${encodedPath})\n`; // 줄바꿈 포함 링크 생성
 
   content = content.replace(match[0], link);
 }
