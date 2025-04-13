@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2025-04-11-first posting.md",
-                "mode": "preview",
-                "source": false
+                "file": "_posts/2025-04-13-Sun.md",
+                "mode": "source",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "2025-04-11-first posting"
+              "title": "2025-04-13-Sun"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "8f187878602be27a",
@@ -171,6 +171,8 @@
   },
   "active": "f609a1d99a611ae0",
   "lastOpenFiles": [
+    "_posts/2025-04-11-first posting.md",
+    "_posts/2025-04-13-Sun.md",
     "_site/assets/js/lunr/lunr.min.js",
     "_site/assets/js/lunr/lunr.js",
     "_site/assets/js/lunr/lunr-store.js",
@@ -182,12 +184,10 @@
     "_site/images/2025-03-27-first-posting/Pasted_image_20250410155000.png",
     "_site/assets/css/main.css.map",
     "_site/assets/css/main.css",
-    "_site/search/index.html",
     "_site/Templates/Paste Image2.md.md",
     "_site/screenshot.png",
     "_site/screenshot-layouts.png",
     "_pages/search.md",
-    "_posts/2025-04-11-first posting.md",
     "_site/_pages/search.md",
     "_site/Templates/Paste Image.md.md",
     "Templates/Paste Image2.md.md",
